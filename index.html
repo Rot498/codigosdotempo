@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#14110f">
+  <title>Códigos do Tempo</title>
+  <link rel="icon" href="icone.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-era="menu">
+  <canvas id="fx"></canvas><div id="flash"></div>
+  <header id="hud">
+    <div class="marca"><img class="logo" src="icone.svg" alt=""><strong>Códigos do Tempo</strong></div>
+    <div class="status">
+      <span id="hudNome" class="chip"></span>
+      <span id="hudEstrelas" class="chip">★ 0</span>
+      <span id="hudMoedas" class="chip">🪙 0</span>
+      <span id="hudEnergia" class="chip energia" title="Energia da máquina do tempo"><i></i></span>
+      <button id="abrirDiario" class="chip chip-btn">📓 Caderno <b id="hudFrag">0</b></button>
+      <button id="som" class="chip chip-btn" title="Efeitos sonoros">🔊</button>
+      <button id="musica" class="chip chip-btn" title="Música">🎵</button>
+      <button id="tema" class="chip chip-btn" title="Tema claro/escuro">🌗</button>
+      <button id="fonte" class="chip chip-btn" title="Tamanho da letra">A+</button>
+    </div>
+  </header>
+  <main id="log" aria-live="polite"></main>
+  <dialog id="diario">
+    <h3>📓 Caderno do Professor Almeida</h3>
+    <div id="listaFrag"></div>
+    <button id="fechar" class="btn">Fechar</button>
+  </dialog>
+  <div id="viagem">
+    <canvas id="warp"></canvas>
+    <div class="portao"><div class="vortex"></div><div class="aneis"><i></i><i></i><i></i><i></i></div></div>
+    <div id="ano">1832</div><p>Atravessando o portal do tempo...</p>
+    <div id="clarao"></div>
+  </div>
+  <div id="gameover">
+    <canvas id="ruido"></canvas>
+    <div class="go-caixa">
+      <h1 class="glitch" data-t="GAME OVER">GAME OVER</h1>
+      <div class="go-relogio">⌛</div>
+      <p id="goMsg"></p>
+      <button id="goBtn" class="btn btn-principal">Continuar</button>
+    </div>
+  </div>
+  <div id="retorno">
+    <svg class="maquina" viewBox="0 0 220 270">
+      <defs><linearGradient id="gl" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#3fd8ff"/></linearGradient></defs>
+      <ellipse cx="110" cy="250" rx="92" ry="14" fill="#0a1230" stroke="#3fd8ff" stroke-width="2"/>
+      <rect x="48" y="62" width="124" height="180" rx="62" fill="#1b2a4f" stroke="#9fb3c8" stroke-width="5"/>
+      <path d="M68 226V128a42 42 0 0 1 84 0V226Z" fill="#0b1630" stroke="#3fd8ff" stroke-width="2"/>
+      <path class="glow" d="M68 226V128a42 42 0 0 1 84 0V226Z" fill="url(#gl)"/>
+      <ellipse class="anel a1" cx="110" cy="170" rx="46" ry="10" fill="none" stroke="#fff" stroke-width="3"/>
+      <ellipse class="anel a2" cx="110" cy="170" rx="46" ry="10" fill="none" stroke="#fff" stroke-width="3"/>
+      <ellipse class="anel a3" cx="110" cy="170" rx="46" ry="10" fill="none" stroke="#fff" stroke-width="3"/>
+      <circle class="luz l1" cx="72" cy="50" r="8"/><circle class="luz l2" cx="110" cy="42" r="8"/><circle class="luz l3" cx="148" cy="50" r="8"/>
+      <rect x="105" y="8" width="10" height="26" rx="4" fill="#9fb3c8"/><circle class="faisca" cx="110" cy="8" r="6"/>
+    </svg>
+    <div id="anoRet">2150</div>
+    <div class="carga"><i id="carga"></i><span id="cargaTxt">ENERGIA 0%</span></div>
+    <p id="msgRet"></p>
+    <button id="retBtn" class="btn btn-principal">Ver resultado</button>
+    <div id="retClarao"></div>
+  </div>
+  <noscript>Ative o JavaScript para jogar.</noscript>
+  <script src="dados.js"></script>
+  <script src="personagens.js"></script>
+  <script src="efeitos.js"></script>
+  <script src="minijogos.js"></script>
+  <script src="jogo.js"></script>
+</body>
+</html>

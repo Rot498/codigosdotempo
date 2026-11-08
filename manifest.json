@@ -1,0 +1,16 @@
+{
+ "name": "Códigos do Tempo",
+ "short_name": "Códigos",
+ "start_url": "index.html",
+ "display": "standalone",
+ "background_color": "#14110f",
+ "theme_color": "#e0a845",
+ "icons": [
+  {
+   "src": "icone.svg",
+   "sizes": "any",
+   "type": "image/svg+xml",
+   "purpose": "any"
+  }
+ ]
+}
